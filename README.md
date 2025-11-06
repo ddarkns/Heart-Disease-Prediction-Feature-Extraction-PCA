@@ -134,7 +134,7 @@ Run the Notebook:
 
     Heart-Disease-Prediction-Feature-Extraction-PCA/
     │
-    ├── PCA_tutorial_digits.ipynb      # Main analysis notebook
+    ├── main.ipynb      # Main analysis notebook
     ├── requirements.txt               # Python dependencies
     ├── README.md                      # Project documentation
     └── data/
