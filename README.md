@@ -120,13 +120,8 @@ Run the Notebook:
 - Metrics: Accuracy, Precision, Recall, F1-Score
 
 ---
-
-## 📈 Results
-
-| Model            | Accuracy | Precision | Recall | F1-Score | Features |
-|------------------|----------|-----------|--------|----------|----------|
-| Full Features     | ~85%     | ~0.86     | ~0.84  | ~0.85    | 15+      |
-| PCA (2 Components) | ~78%     | ~0.79     | ~0.77  | ~0.78    | 2        |
+###  📈  Results & Outputs:
+<img width="1068" height="752" alt="image" src="https://github.com/user-attachments/assets/32fabbc7-5b69-401c-9efa-cd271ddbc7b6" />
 
 ---
 
@@ -141,8 +136,7 @@ Run the Notebook:
         └── heart.csv                  # Dataset file
 
 ---
-###  📈  Results & Outputs:
-<img width="1068" height="752" alt="image" src="https://github.com/user-attachments/assets/32fabbc7-5b69-401c-9efa-cd271ddbc7b6" />
+
 
 ## 🔮 Future Enhancements
 - Try t-SNE and UMAP for dimensionality reduction
