@@ -1,7 +1,9 @@
 # Heart-Disease-Prediction-Feature-Extraction-PCA
 A comprehensive machine learning project demonstrating Principal Component Analysis (PCA) for feature extraction and dimensionality reduction in heart disease classification.
 
-# Heart Disease Prediction with PCA Feature Extraction
+---
+
+# ❤️ Heart Disease Prediction with PCA Feature Extraction
 
 ![Python](https://img.shields.io/badge/Python-3.7%2B-blue)
 ![Machine Learning](https://img.shields.io/badge/Machine-Learning-orange)
@@ -10,7 +12,10 @@ A comprehensive machine learning project demonstrating Principal Component Analy
 
 A comprehensive machine learning project that demonstrates feature extraction and dimensionality reduction using Principal Component Analysis (PCA) for heart disease classification.
 
+---
+
 ## 📋 Table of Contents
+
 - [Overview](#overview)
 - [Dataset](#dataset)
 - [Features](#features)
@@ -19,10 +24,15 @@ A comprehensive machine learning project that demonstrates feature extraction an
 - [Methodology](#methodology)
 - [Results](#results)
 - [Project Structure](#project-structure)
+- [Future Enhancements](#future-enhancements)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+---
 
 ## 🎯 Overview
 
-This project explores how **Principal Component Analysis (PCA)** can be used to reduce the dimensionality of clinical data while maintaining predictive power for heart disease classification. We compare model performance using all original features versus PCA-reduced components.
+This project explores how **Principal Component Analysis (PCA)** can be used to reduce the dimensionality of clinical data while maintaining predictive power for heart disease classification.
 
 **Key Objectives:**
 - Preprocess and clean clinical heart disease data
@@ -31,158 +41,124 @@ This project explores how **Principal Component Analysis (PCA)** can be used to 
 - Visualize high-dimensional data in 2D space
 - Analyze trade-offs between model accuracy and feature reduction
 
+---
+
 ## 📊 Dataset
 
-The project uses the **Heart Failure Prediction Dataset** containing 918 patient records with clinical features.
+The project uses the **Heart Failure Prediction Dataset** containing **918 patient records** with clinical features.
 
 **Target Variable:**
-- `HeartDisease`: Binary classification (0 = No Heart Disease, 1 = Heart Disease)
+- `HeartDisease` — Binary classification (0 = No Heart Disease, 1 = Heart Disease)
 
 **Clinical Features:**
-- **Numerical**: Age, RestingBP, Cholesterol, FastingBS, MaxHR, Oldpeak
-- **Categorical**: Sex, ChestPainType, RestingECG, ExerciseAngina, ST_Slope
+- **Numerical:** Age, RestingBP, Cholesterol, FastingBS, MaxHR, Oldpeak  
+- **Categorical:** Sex, ChestPainType, RestingECG, ExerciseAngina, ST_Slope
+
+---
 
 ## 🔧 Installation
 
-### Prerequisites
+### ✅ Prerequisites
 - Python 3.7+
 - pip package manager
 
-### Setup Instructions
+### 📦 Dependencies (requirements.txt)
 
-Dependencies
-txt
+    pandas>=1.3.0
+    scikit-learn>=1.0.0
+    matplotlib>=3.5.0
+    numpy>=1.21.0
+    jupyter>=1.0.0
+    seaborn>=0.11.0
 
-pandas>=1.3.0
-scikit-learn>=1.0.0
-matplotlib>=3.5.0
-numpy>=1.21.0
-jupyter>=1.0.0
-seaborn>=0.11.0
+Install dependencies:
 
-🚀 Usage
-Running the Analysis
-bash
+    pip install -r requirements.txt
 
-# Launch Jupyter Notebook
-jupyter notebook PCA_tutorial_digits.ipynb
+---
 
+## 🚀 Usage
 
-The notebook is organized sequentially:
+Run the Notebook:
 
- -Data Loading & Exploration - Understand dataset structure
+    jupyter notebook PCA_tutorial_digits.ipynb
 
- -Data Preprocessing - Handle categorical variables and outliers
+---
 
- -Feature Engineering - One-hot encoding and standardization
+## 📓 Notebook Workflow (Sequential Steps)
 
- -PCA Implementation - Dimensionality reduction
+1. **Data Loading & Exploration** — Understand dataset structure  
+2. **Data Preprocessing** — Handle categorical variables and outliers  
+3. **Feature Engineering** — One-hot encoding & standardization  
+4. **PCA Implementation** — Dimensionality reduction  
+5. **Model Training** — Random Forest classifier  
+6. **Evaluation & Visualization** — Performance comparison & plots  
 
- -Model Training - Random Forest classifier
+---
 
--Evaluation & Visualization - Compare results and create plots
-🔬 Methodology
-1. Data Preprocessing
+## 🔬 Methodology
 
-    One-hot encoding for categorical variables (ChestPainType, RestingECG)
+### 1. Data Preprocessing
+- One-hot encoding for categorical variables (`ChestPainType`, `RestingECG`)
+- Outlier detection using **Z-score method** (±3 standard deviations)
+- Standardization using **StandardScaler** (required for PCA)
 
-    Outlier detection using Z-score method (±3 standard deviations)
+### 2. Principal Component Analysis (PCA)
 
-    Feature standardization using StandardScaler for PCA compatibility
+    from sklearn.decomposition import PCA
+    from sklearn.preprocessing import StandardScaler
 
-2. Principal Component Analysis
-python
-```
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
 
-# Standardize features
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+    pca = PCA(n_components=2)
+    X_pca = pca.fit_transform(X_scaled)
 
-# Apply PCA for dimensionality reduction
-pca = PCA(n_components=2)
-X_pca = pca.fit_transform(X_scaled)
-```
-3. Model Training & Evaluation
+### 3. Model Training & Evaluation
+- Algorithm: **Random Forest Classifier**
+- Train/Test Split: **80/20**
+- Metrics: Accuracy, Precision, Recall, F1-Score
 
-    Algorithm: Random Forest Classifier
+---
 
-    Train-Test Split: 80-20 ratio
-
-    Evaluation Metrics: Accuracy, Precision, Recall, F1-Score
-
-    Comparison: Full feature set vs PCA-reduced features
 ## 📈 Results
 
-### Performance Comparison
+| Model            | Accuracy | Precision | Recall | F1-Score | Features |
+|------------------|----------|-----------|--------|----------|----------|
+| Full Features     | ~85%     | ~0.86     | ~0.84  | ~0.85    | 15+      |
+| PCA (2 Components) | ~78%     | ~0.79     | ~0.77  | ~0.78    | 2        |
 
-| Model | Accuracy | Precision | Recall | F1-Score | Features |
-|-------|----------|-----------|--------|-----------|----------|
-| Full Features | ~85% | ~0.86 | ~0.84 | ~0.85 | 15+ |
-| PCA (2 Components) | ~78% | ~0.79 | ~0.77 | ~0.78 | 2 |
-Key Findings
+---
 
-   -Dimensionality Reduction: Successfully reduced from 15+ features to 2 principal components
+## 📁 Project Structure
 
-   -Variance Explained: First two components capture significant data variance
+    Heart-Disease-Prediction-Feature-Extraction-PCA/
+    │
+    ├── PCA_tutorial_digits.ipynb      # Main analysis notebook
+    ├── requirements.txt               # Python dependencies
+    ├── README.md                      # Project documentation
+    └── data/
+        └── heart.csv                  # Dataset file
 
-   -Performance Trade-off: Minimal accuracy reduction for substantial feature reduction
+---
 
-   -Visualization: 2D PCA plots provide clear separation between patient groups
+## 🔮 Future Enhancements
+- Try t-SNE and UMAP for dimensionality reduction
+- Test alternate classifiers (XGBoost, SVM, Neural Networks)
+- Add cross-validation and hyperparameter tuning
+- Deploy as a web application
+- Add SHAP values for interpretability
 
-Visualizations Included
+---
 
-   -PCA scatter plots with heart disease classification
+## 👨‍💻 Author
 
-   -Explained variance plots
+**Your Name**  
+GitHub: `@ddarkns`
 
-   -Confusion matrix comparisons
+---
 
-   -Feature importance analysis
-   
-📁 Project Structure
-Heart-Disease-Prediction-Feature-Extraction-PCA/
-│
-├── PCA_tutorial_digits.ipynb          # Main analysis notebook
-├── requirements.txt                   # Python dependencies
-├── README.md                         # Project documentation
-└── data/
-    └── heart.csv                     # Dataset file
-🛠️ Technical Skills Demonstrated
-
-   -Data Preprocessing: Handling missing values, outlier detection, feature encoding
-
-   -Dimensionality Reduction: PCA implementation and interpretation
-
-   -Machine Learning: Random Forest classification, model evaluation
-
-   -Data Visualization: Matplotlib and Seaborn for insightful plots
-
-   -Python Programming: Pandas, Scikit-learn, NumPy proficiency
-
-🔮 Future Enhancements
-
-   -Experiment with different dimensionality reduction techniques (t-SNE, UMAP)
-
-   -Try alternative classification algorithms (XGBoost, SVM, Neural Networks)
-
-   -Implement hyperparameter tuning and cross-validation
-
-   -Develop a web application for real-time predictions
-
-   -Add SHAP values for model interpretability
-
-👨‍💻 Author
-
-Your Name
-
-   -GitHub: @ddarkns
-
-🙏 Acknowledgments
-
-   -Heart Failure Prediction Dataset from Kaggle
-
-   -Scikit-learn library for machine learning tools
-
-   -Matplotlib and Seaborn for visualization capabilities
+## 🙏 Acknowledgments
+- Dataset: Heart Failure Prediction Dataset (Kaggle)
+- Scikit-learn for machine learning tools  
+- Matplotlib/Seaborn for data visualization
