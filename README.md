@@ -70,17 +70,17 @@ jupyter notebook PCA_tutorial_digits.ipynb
 
 The notebook is organized sequentially:
 
-    Data Loading & Exploration - Understand dataset structure
+ -Data Loading & Exploration - Understand dataset structure
 
-    Data Preprocessing - Handle categorical variables and outliers
+ -Data Preprocessing - Handle categorical variables and outliers
 
-    Feature Engineering - One-hot encoding and standardization
+ -Feature Engineering - One-hot encoding and standardization
 
-    PCA Implementation - Dimensionality reduction
+ -PCA Implementation - Dimensionality reduction
 
-    Model Training - Random Forest classifier
+ -Model Training - Random Forest classifier
 
-    Evaluation & Visualization - Compare results and create plots
+-Evaluation & Visualization - Compare results and create plots
 🔬 Methodology
 1. Data Preprocessing
 
