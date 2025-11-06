@@ -141,6 +141,7 @@ Run the Notebook:
         └── heart.csv                  # Dataset file
 
 ---
+<img width="1068" height="752" alt="image" src="https://github.com/user-attachments/assets/32fabbc7-5b69-401c-9efa-cd271ddbc7b6" />
 
 ## 🔮 Future Enhancements
 - Try t-SNE and UMAP for dimensionality reduction
