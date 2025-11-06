@@ -141,7 +141,7 @@ Run the Notebook:
         └── heart.csv                  # Dataset file
 
 ---
-###  OUTPUT ANALYSIS
+###  📈  Results & Outputs:
 <img width="1068" height="752" alt="image" src="https://github.com/user-attachments/assets/32fabbc7-5b69-401c-9efa-cd271ddbc7b6" />
 
 ## 🔮 Future Enhancements
