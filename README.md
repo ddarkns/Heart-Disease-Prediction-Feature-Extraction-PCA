@@ -123,23 +123,24 @@ X_pca = pca.fit_transform(X_scaled)
 | PCA (2 Components) | ~78% | ~0.79 | ~0.77 | ~0.78 | 2 |
 Key Findings
 
-    Dimensionality Reduction: Successfully reduced from 15+ features to 2 principal components
+   -Dimensionality Reduction: Successfully reduced from 15+ features to 2 principal components
 
-    Variance Explained: First two components capture significant data variance
+   -Variance Explained: First two components capture significant data variance
 
-    Performance Trade-off: Minimal accuracy reduction for substantial feature reduction
+   -Performance Trade-off: Minimal accuracy reduction for substantial feature reduction
 
-    Visualization: 2D PCA plots provide clear separation between patient groups
+   -Visualization: 2D PCA plots provide clear separation between patient groups
 
 Visualizations Included
 
-    PCA scatter plots with heart disease classification
+   -PCA scatter plots with heart disease classification
 
-    Explained variance plots
+   -Explained variance plots
 
-    Confusion matrix comparisons
+   -Confusion matrix comparisons
 
-    Feature importance analysis
+   -Feature importance analysis
+   
 📁 Project Structure
 Heart-Disease-Prediction-Feature-Extraction-PCA/
 │
@@ -150,38 +151,38 @@ Heart-Disease-Prediction-Feature-Extraction-PCA/
     └── heart.csv                     # Dataset file
 🛠️ Technical Skills Demonstrated
 
-    Data Preprocessing: Handling missing values, outlier detection, feature encoding
+   -Data Preprocessing: Handling missing values, outlier detection, feature encoding
 
-    Dimensionality Reduction: PCA implementation and interpretation
+   -Dimensionality Reduction: PCA implementation and interpretation
 
-    Machine Learning: Random Forest classification, model evaluation
+   -Machine Learning: Random Forest classification, model evaluation
 
-    Data Visualization: Matplotlib and Seaborn for insightful plots
+   -Data Visualization: Matplotlib and Seaborn for insightful plots
 
-    Python Programming: Pandas, Scikit-learn, NumPy proficiency
+   -Python Programming: Pandas, Scikit-learn, NumPy proficiency
 
 🔮 Future Enhancements
 
-    Experiment with different dimensionality reduction techniques (t-SNE, UMAP)
+   -Experiment with different dimensionality reduction techniques (t-SNE, UMAP)
 
-    Try alternative classification algorithms (XGBoost, SVM, Neural Networks)
+   -Try alternative classification algorithms (XGBoost, SVM, Neural Networks)
 
-    Implement hyperparameter tuning and cross-validation
+   -Implement hyperparameter tuning and cross-validation
 
-    Develop a web application for real-time predictions
+   -Develop a web application for real-time predictions
 
-    Add SHAP values for model interpretability
+   -Add SHAP values for model interpretability
 
 👨‍💻 Author
 
 Your Name
 
-    GitHub: @ddarkns
+   -GitHub: @ddarkns
 
 🙏 Acknowledgments
 
-    Heart Failure Prediction Dataset from Kaggle
+   -Heart Failure Prediction Dataset from Kaggle
 
-    Scikit-learn library for machine learning tools
+   -Scikit-learn library for machine learning tools
 
-    Matplotlib and Seaborn for visualization capabilities
+   -Matplotlib and Seaborn for visualization capabilities
