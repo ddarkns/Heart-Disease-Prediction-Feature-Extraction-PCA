@@ -50,17 +50,6 @@ The project uses the **Heart Failure Prediction Dataset** containing 918 patient
 
 ### Setup Instructions
 
-```bash
-# 1. Clone the repository
-git clone https://github.com/yourusername/Heart-Disease-Prediction-Feature-Extraction-PCA.git
-cd Heart-Disease-Prediction-Feature-Extraction-PCA
-
-# 2. Create virtual environment (recommended)
-python -m venv heart_env
-source heart_env/bin/activate  # On Windows: heart_env\Scripts\activate
-
-# 3. Install dependencies
-pip install -r requirements.txt
 Dependencies
 txt
 
@@ -78,6 +67,7 @@ bash
 # Launch Jupyter Notebook
 jupyter notebook PCA_tutorial_digits.ipynb
 
+
 The notebook is organized sequentially:
 
     Data Loading & Exploration - Understand dataset structure
@@ -91,7 +81,6 @@ The notebook is organized sequentially:
     Model Training - Random Forest classifier
 
     Evaluation & Visualization - Compare results and create plots
-
 🔬 Methodology
 1. Data Preprocessing
 
@@ -103,7 +92,7 @@ The notebook is organized sequentially:
 
 2. Principal Component Analysis
 python
-
+```
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import StandardScaler
 
@@ -114,7 +103,7 @@ X_scaled = scaler.fit_transform(X)
 # Apply PCA for dimensionality reduction
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X_scaled)
-
+```
 3. Model Training & Evaluation
 
     Algorithm: Random Forest Classifier
@@ -124,12 +113,14 @@ X_pca = pca.fit_transform(X_scaled)
     Evaluation Metrics: Accuracy, Precision, Recall, F1-Score
 
     Comparison: Full feature set vs PCA-reduced features
+## 📈 Results
 
-📈 Results
-Performance Comparison
-Model	Accuracy	Precision	Recall	F1-Score	Features
-Full Features	~85%	~0.86	~0.84	~0.85	15+
-PCA (2 Components)	~78%	~0.79	~0.77	~0.78	2
+### Performance Comparison
+
+| Model | Accuracy | Precision | Recall | F1-Score | Features |
+|-------|----------|-----------|--------|-----------|----------|
+| Full Features | ~85% | ~0.86 | ~0.84 | ~0.85 | 15+ |
+| PCA (2 Components) | ~78% | ~0.79 | ~0.77 | ~0.78 | 2 |
 Key Findings
 
     Dimensionality Reduction: Successfully reduced from 15+ features to 2 principal components
@@ -149,10 +140,7 @@ Visualizations Included
     Confusion matrix comparisons
 
     Feature importance analysis
-
 📁 Project Structure
-text
-
 Heart-Disease-Prediction-Feature-Extraction-PCA/
 │
 ├── PCA_tutorial_digits.ipynb          # Main analysis notebook
@@ -160,7 +148,6 @@ Heart-Disease-Prediction-Feature-Extraction-PCA/
 ├── README.md                         # Project documentation
 └── data/
     └── heart.csv                     # Dataset file
-
 🛠️ Technical Skills Demonstrated
 
     Data Preprocessing: Handling missing values, outlier detection, feature encoding
@@ -189,13 +176,8 @@ Heart-Disease-Prediction-Feature-Extraction-PCA/
 
 Your Name
 
-    GitHub: @yourusername
+    GitHub: @ddarkns
 
-    LinkedIn: Your LinkedIn
-
-📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
 🙏 Acknowledgments
 
     Heart Failure Prediction Dataset from Kaggle
