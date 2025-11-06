@@ -152,8 +152,6 @@ Run the Notebook:
 ---
 
 ## 👨‍💻 Author
-
-**Your Name**  
 GitHub: `@ddarkns`
 
 ---
