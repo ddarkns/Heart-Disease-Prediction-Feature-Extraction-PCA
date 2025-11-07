@@ -121,8 +121,13 @@ Run the Notebook:
 
 ---
 ###  📈  Results & Outputs:
+## 🔍 Finding the Optimal Number of Components
 <img width="1068" height="752" alt="image" src="https://github.com/user-attachments/assets/32fabbc7-5b69-401c-9efa-cd271ddbc7b6" />
+## 🎯 PC1 vs PC2: Patient Clustering Visualization
 <img width="1129" height="724" alt="image" src="https://github.com/user-attachments/assets/52d9c6ae-1333-49c4-a9fb-805a5b3bf176" />
+## 🏆 Top Contributing Features Analysis
+<img width="1176" height="700" alt="image" src="https://github.com/user-attachments/assets/170aecf1-64ee-4520-8873-fef11edaa593" />
+
 
 
 
