@@ -122,7 +122,8 @@ Run the Notebook:
 ---
 ###  📈  Results & Outputs:
 <img width="1068" height="752" alt="image" src="https://github.com/user-attachments/assets/32fabbc7-5b69-401c-9efa-cd271ddbc7b6" />
-![Uploading image.png…]()
+<img width="1129" height="724" alt="image" src="https://github.com/user-attachments/assets/52d9c6ae-1333-49c4-a9fb-805a5b3bf176" />
+
 
 
 ---
